@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "nom": "Math\u00e9matiques",
+        "couleur": "#FF0000"
+    },
+    {
+        "id": 2,
+        "nom": "Fran\u00e7ais",
+        "couleur": "#00FF00"
+    },
+    {
+        "id": 3,
+        "nom": "Anglais",
+        "couleur": "#0000FF"
+    },
+    {
+        "id": 4,
+        "nom": "Espagnol",
+        "couleur": "#FFA500"
+    },
+    {
+        "id": 5,
+        "nom": "Allemand",
+        "couleur": "#800080"
+    },
+    {
+        "id": 6,
+        "nom": "Histoire-G\u00e9ographie",
+        "couleur": "#008080"
+    },
+    {
+        "id": 7,
+        "nom": "Physique-Chimie",
+        "couleur": "#FFC0CB"
+    },
+    {
+        "id": 8,
+        "nom": "Sciences de la Vie et de la Terre",
+        "couleur": "#808080"
+    },
+    {
+        "id": 9,
+        "nom": "Education Physique et Sportive",
+        "couleur": "#800000"
+    },
+    {
+        "id": 10,
+        "nom": "Education Morale et Civique",
+        "couleur": "#008000"
+    },
+    {
+        "id": 11,
+        "nom": "Arts Plastiques",
+        "couleur": "#000080"
+    },
+    {
+        "id": 12,
+        "nom": "Musique",
+        "couleur": "#FF00FF"
+    },
+    {
+        "id": 13,
+        "nom": "POPOPO",
+        "couleur": "#eeff00"
+    }
+]

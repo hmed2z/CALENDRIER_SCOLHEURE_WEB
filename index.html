@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur ScolHeure</title>
+    <link rel="stylesheet" href="style-form.css">
+    <link rel="stylesheet" href="common.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <h1>BIENVENUE SUR SCOLHEURE</h1>
+    <main>
+    <div class="container">
+    <div class="membership">
+    <form method="post" action="authentification.php" onsubmit="return handleFormSubmit(this)">
+    <fieldset>
+    <input type="hidden" name="action" value="login">
+    <legend>Connexion</legend>
+    <label for="email">Courriel : </label><input type="email" name="email" value=""> <br>
+    <label for="password">Mot de passe : </label><input type="password" name="password" value=""> <br>
+    <div class="flexing"><button id="login" type="submit" name="login">Se connecter</button></div>
+    <div class="Connect">
+    </fieldset>
+    </form>
+    <p id="SINON">Si vous n'êtes pas membre :</p>
+    <form method="post" action="authentification.php" onsubmit="return handleFormSubmit(this)">
+    <fieldset>
+    <input type="hidden" name="action" value="signup">
+    <legend id="connect">Inscription au service</legend>
+    <label for="email">Courriel : </label><input type="email" name="email" value=""> <br>
+    <label for="password">Mot de passe : </label><input type="password" name="password" value=""> <br>
+    <select id="experience" name="experience">
+    <option value="">Renseignez votre statut</option>
+    <option value="etudiant">Etudiant</option>
+    <option value="coordinateur">Coordinateur pédagogique</option>
+    <option value="responsable">Responsable</option>
+    </select>
+    <br>
+    <div class="flexing"><button id="signup" type="submit" name="signup">S'inscrire</button></div>
+    </fieldset>
+    </form>
+    </div>
+    </div>
+</div>
+</main>
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(event) {
+            event.preventDefault();
+            handleFormSubmit(event.target);
+        });
+    });
+
+    function handleFormSubmit(formElement) {
+        const form = $(formElement);
+        const serializedData = form.serialize();
+
+        $.ajax({
+            url: 'authentification.php',
+            type: 'POST',
+            data: serializedData,
+            dataType: 'json',
+            success: function(response) {
+                if (response.error) {
+                    showErrorModal(response.error);
+                } else {
+                    if (response.redirect) {
+                        window.location.href = response.redirect;
+                    } else {
+                        window.location.href = 'Calendrier.php';
+                    }
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log('Raw server response:', jqXHR.responseText);
+                console.error('Error data:', jqXHR, textStatus, errorThrown);
+            }
+        });
+    }
+
+    function showErrorModal(errorMessage) {
+        alert(errorMessage);
+    }
+</script>   
+</body>
+</html>

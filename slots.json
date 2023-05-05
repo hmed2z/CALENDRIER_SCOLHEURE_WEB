@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "date": "2023-05-10",
+        "horaire_debut": "08h00",
+        "horaire_fin": "09h00",
+        "type": "Cours",
+        "matiere": 1,
+        "enseignant": 1,
+        "salle": 1,
+        "groupe": "Groupe 1"
+    }
+]   

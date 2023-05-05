@@ -1,0 +1,17 @@
+[
+    {
+        "email": "respo@respo",
+        "password": "test",
+        "role": "responsable"
+    },
+    {
+        "email": "etud@etud",
+        "password": "test",
+        "role": "etudiant"
+    },
+    {
+        "email": "coord@coord",
+        "password": "test",
+        "role": "coordinateur"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nom": "Salle 101"
+    },
+    {
+        "id": 2,
+        "nom": null
+    },
+    {
+        "id": 3,
+        "nom": null
+    },
+    {
+        "id": 4,
+        "nom": null
+    },
+    {
+        "id": 5,
+        "nom": null
+    }
+]
